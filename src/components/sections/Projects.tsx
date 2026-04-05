@@ -24,18 +24,18 @@ export const Projects = () => {
           viewport={{ once: true }}
           className="max-w-6xl mx-auto"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-12 flex items-center gap-4">
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 md:mb-12 flex items-center gap-4 px-4 overflow-hidden">
             <span className="text-primary">04.</span> Featured Projects
             <div className="h-px flex-1 bg-white/10" />
           </h2>
 
-          {/* Category Filter */}
-          <div className="flex flex-wrap gap-4 mb-16 justify-center">
+          {/* Category Filter - Scrollable on mobile */}
+          <div className="flex overflow-x-auto pb-4 mb-10 md:mb-16 gap-3 no-scrollbar px-4 justify-start md:justify-center -mx-4 md:mx-0">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-6 py-2 rounded-full text-sm font-bold transition-all ${
+                className={`px-6 py-2.5 rounded-full text-xs md:text-sm font-bold whitespace-nowrap transition-all ${
                   activeCategory === cat 
                     ? "bg-primary text-white shadow-lg shadow-primary/20" 
                     : "glass border-white/5 text-foreground/40 hover:text-foreground"
@@ -48,7 +48,7 @@ export const Projects = () => {
 
           <motion.div 
             layout
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4"
           >
             <AnimatePresence mode="popLayout">
               {filteredProjects.map((project, i) => (

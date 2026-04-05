@@ -71,7 +71,7 @@ export const Hero = () => {
                 I build
               </motion.span>
               <span className="inline-flex items-center justify-center min-h-[1.1em] w-full mt-4">
-                <span className="text-gradient relative break-words px-2">
+                <span className="text-gradient relative wrap-break-word px-2">
                   {displayText}
                   <motion.span 
                     animate={{ opacity: [0, 1, 0] }}

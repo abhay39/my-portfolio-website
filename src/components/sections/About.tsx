@@ -39,10 +39,18 @@ export const About = () => {
               </p>
             </div>
 
-            <div className="relative group">
-              <div className="absolute -inset-4 bg-linear-to-r from-primary to-secondary rounded-2xl opacity-20 group-hover:opacity-40 transition duration-500 blur-xl" />
-              <div className="relative aspect-square rounded-2xl overflow-hidden glass border-white/10 flex items-center justify-center text-6xl font-black text-white/10">
-                AKG
+            <div className="relative group lg:ml-auto">
+              <div className="absolute -inset-4 bg-linear-to-r from-primary to-secondary rounded-[32px] opacity-20 group-hover:opacity-40 transition duration-700 blur-2xl" />
+              <div className="relative aspect-4/5 md:aspect-square w-full max-w-[320px] mx-auto md:max-w-none rounded-[32px] overflow-hidden glass border-white/10 group-hover:border-primary/50 transition-all duration-700 shadow-2xl">
+                <motion.img 
+                  src="/profile.png" 
+                  alt="Abhay Kumar Gupta"
+                  className="w-full h-full object-cover grayscale-20 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                  initial={{ scale: 1.2, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-background/80 via-transparent to-transparent opacity-60 group-hover:opacity-20 transition-opacity duration-700" />
               </div>
             </div>
           </div>

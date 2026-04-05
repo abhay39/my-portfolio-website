@@ -83,14 +83,14 @@ export const Skills = () => {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <div className="flex flex-col items-center mb-16">
-            <div className="text-[10px] uppercase tracking-[0.5em] text-primary font-black mb-4">Technical Proficiency</div>
+          <div className="flex flex-col items-center mb-10 md:mb-16 px-4">
+            <div className="text-[10px] uppercase tracking-[0.5em] text-primary font-black mb-4 text-center">Technical Proficiency</div>
             <h2 className="text-3xl md:text-6xl font-black tracking-tighter text-center">
               Tech Stack<span className="text-primary">.</span>
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 px-4">
             {skillGroups.map((group, i) => (
               <motion.div
                 key={group.title}
@@ -98,21 +98,21 @@ export const Skills = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-8 glass-morphism rounded-3xl hover:border-primary/30 transition-all duration-500 group"
+                className="p-6 md:p-8 glass-morphism rounded-3xl hover:border-primary/30 transition-all duration-500 group"
               >
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="p-4 bg-white/5 rounded-2xl group-hover:bg-primary/10 group-hover:scale-110 transition-all duration-500">
+                <div className="flex items-center gap-4 mb-6 md:mb-8">
+                  <div className="p-3 md:p-4 bg-white/5 rounded-2xl group-hover:bg-primary/10 group-hover:scale-110 transition-all duration-500">
                     {group.icon}
                   </div>
-                  <h3 className="text-2xl font-bold tracking-tight">{group.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold tracking-tight">{group.title}</h3>
                 </div>
-                <div className="flex flex-wrap gap-2.5">
+                <div className="flex flex-wrap gap-2 md:gap-2.5">
                   {group.skills.map((skill) => {
                     const skillData = skillIconMap[skill];
                     return (
                       <span
                         key={skill}
-                        className="px-4 py-2 bg-white/5 border border-white/5 rounded-2xl text-sm text-foreground/70 hover:text-white hover:border-primary/20 hover:bg-primary/5 transition-all duration-300 cursor-default flex items-center gap-2 group/tag"
+                        className="px-3 md:px-4 py-1.5 md:py-2 bg-white/5 border border-white/5 rounded-xl md:rounded-2xl text-xs md:text-sm text-foreground/70 hover:text-white hover:border-primary/20 hover:bg-primary/5 transition-all duration-300 cursor-default flex items-center gap-2 group/tag"
                       >
                         <span className={skillData?.color || "text-foreground/40"}>
                           {skillData?.icon || <Code2 size={14} />}
