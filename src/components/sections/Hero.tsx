@@ -61,7 +61,7 @@ export const Hero = () => {
               <span className="relative z-10">Available for new projects</span>
             </div>
             
-            <h1 className="text-5xl sm:text-7xl md:text-[120px] font-black mb-10 tracking-tighter leading-[0.95] text-center w-full">
+            <h1 className="text-4xl sm:text-6xl md:text-[80px] lg:text-[110px] font-black mb-10 tracking-tighter leading-[0.95] text-center w-full max-w-[95vw]">
               <motion.span
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -71,12 +71,12 @@ export const Hero = () => {
                 I build
               </motion.span>
               <span className="inline-flex items-center justify-center min-h-[1.1em] w-full mt-4">
-                <span className="text-gradient relative">
+                <span className="text-gradient relative break-words px-2">
                   {displayText}
                   <motion.span 
                     animate={{ opacity: [0, 1, 0] }}
                     transition={{ duration: 0.8, repeat: Infinity }}
-                    className="absolute -right-4 top-0 h-full w-1.5 bg-primary/50"
+                    className="absolute -right-2 top-0 h-full w-1 bg-primary/50"
                   />
                 </span>
               </span>
@@ -86,7 +86,7 @@ export const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
-              className="max-w-2xl text-lg md:text-xl text-foreground/50 mb-14 leading-relaxed font-medium px-4"
+              className="max-w-2xl text-base md:text-xl text-foreground/50 mb-14 leading-relaxed font-medium px-4 md:px-0"
             >
               {resumeData.summary}
             </motion.p>
@@ -96,7 +96,7 @@ export const Hero = () => {
                 <Magnetic>
                   <a
                     href="#projects"
-                    className="w-full sm:w-auto px-10 py-5 bg-primary text-white rounded-full font-bold transition-all hover:shadow-[0_0_30px_rgba(236,72,153,0.5)] flex items-center justify-center gap-3 group relative overflow-hidden"
+                    className="w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 bg-primary text-white rounded-full font-bold transition-all hover:shadow-[0_0_30px_rgba(236,72,153,0.5)] flex items-center justify-center gap-3 group relative overflow-hidden"
                   >
                     <span className="relative z-10 flex items-center gap-3">
                       View Projects
@@ -109,7 +109,7 @@ export const Hero = () => {
                   <a
                     href="/resume.pdf"
                     download
-                    className="w-full sm:w-auto px-10 py-5 glass border-white/10 rounded-full font-bold transition-all hover:bg-white/5 text-foreground/80 flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 glass border-white/10 rounded-full font-bold transition-all hover:bg-white/5 text-foreground/80 flex items-center justify-center gap-2"
                   >
                     Resume
                     <motion.span
